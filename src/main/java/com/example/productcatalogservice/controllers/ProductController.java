@@ -4,6 +4,9 @@ import com.example.productcatalogservice.dtos.ProductDto;
 import com.example.productcatalogservice.models.Product;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @RestController
 public class ProductController {
 
@@ -13,12 +16,12 @@ public class ProductController {
     }
 
     @GetMapping("/products")
-    public ProductDto getProducts(@RequestBody ProductDto product){
-        return new ProductDto();
+    public List<ProductDto> getProducts(){
+        return new ArrayList<>();
     }
 
-    @PostMapping("/products/{id}")
-    public void createProduct(@PathVariable long id ,@RequestBody ProductDto product){
+    @PostMapping("/products")
+    public void createProduct(@RequestBody ProductDto product){
 
     }
 
@@ -29,11 +32,11 @@ public class ProductController {
 
     @DeleteMapping("/products/{id}")
     public void deleteProduct(@PathVariable long id){
-        deleteProduct(id);
+
     }
 
     @PatchMapping("/products/{id}")
-    public ProductDto updateProduct(@RequestBody ProductDto product){
+    public ProductDto updateProduct(@PathVariable long id,@RequestBody ProductDto product){
         return product;
     }
 
