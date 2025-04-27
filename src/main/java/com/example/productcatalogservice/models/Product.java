@@ -5,6 +5,10 @@ import lombok.Setter;
 
 @Setter
 @Getter
-public class Product {
-    long id;
+public class Product extends BaseModel {
+
+    private String name;
+    private String description;
+    private String image_url;
+    private Long price;
 }

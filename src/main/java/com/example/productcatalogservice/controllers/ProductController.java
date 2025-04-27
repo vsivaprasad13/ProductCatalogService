@@ -1,19 +1,40 @@
 package com.example.productcatalogservice.controllers;
 
+import com.example.productcatalogservice.dtos.ProductDto;
 import com.example.productcatalogservice.models.Product;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class ProductController {
 
-    @GetMapping("/product/{id}")
-    public Product getProductDetails(@PathVariable long id){
-        Product product = new Product();
-        product.setId(id);
-        return product;
+    @GetMapping("/products/{id}")
+    public ProductDto getProductDetails(@PathVariable long id){
+        return new ProductDto();
+    }
 
+    @GetMapping("/products")
+    public ProductDto getProducts(@RequestBody ProductDto product){
+        return new ProductDto();
+    }
+
+    @PostMapping("/products/{id}")
+    public void createProduct(@PathVariable long id ,@RequestBody ProductDto product){
+
+    }
+
+    @PutMapping("/products/{id}")
+    public ProductDto updateCompleteProduct(@PathVariable long id,@RequestBody ProductDto product){
+        return product;
+    }
+
+    @DeleteMapping("/products/{id}")
+    public void deleteProduct(@PathVariable long id){
+        deleteProduct(id);
+    }
+
+    @PatchMapping("/products/{id}")
+    public ProductDto updateProduct(@RequestBody ProductDto product){
+        return product;
     }
 
 }
