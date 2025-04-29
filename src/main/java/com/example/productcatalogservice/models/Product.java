@@ -10,5 +10,6 @@ public class Product extends BaseModel {
     private String name;
     private String description;
     private String image_url;
-    private Long price;
+    private Double price;
+    private Category category;
 }
