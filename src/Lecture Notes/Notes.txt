@@ -1,0 +1,21 @@
+Git practice : https://learngitbranching.js.org/
+
+spring boot-
+-
+
+
+Controller and @RestController Annotations : https://www.baeldung.com/spring-controller-vs-restcontroller
+
+PathVariable Annotation : https://www.baeldung.com/spring-pathvariable
+
+
+fake store api for database: https://fakestoreapi.com/docs
+
+object mapper : https://www.baeldung.com/jackson-object-mapper-tutorial
+
+repo : https://github.com/ak-s-0723/ProductCatalogServiceFeb2025
+
+query methods :https://docs.spring.io/spring-data/jpa/reference/repositories/query-keywords-reference.html
+
+
+ChatGPT : https://chatgpt.com/share/681f10f2-42c4-800b-a099-a90774c4c82b
